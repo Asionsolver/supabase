@@ -1,0 +1,176 @@
+@import "tailwindcss";
+/* Container */
+.task-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.task-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-input,
+.task-textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.task-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.task-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #1e4bb8;
+}
+
+/* Task List */
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.task-info h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #2563eb;
+}
+
+.task-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #fbbf24;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #d97706;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e4bb8;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.auth-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.auth-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #1e4bb8;
+}
+
+.auth-toggle {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-link {
+  color: #2563eb;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
