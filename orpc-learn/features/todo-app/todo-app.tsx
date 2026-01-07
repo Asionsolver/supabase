@@ -103,32 +103,52 @@ const TodoApp = () => {
         </form>
 
         <ul className="space-y-2">
-          {todos.map((todo) => (
-            <li
-              key={todo.id}
-              className="flex items-center justify-between p-2 border rounded"
-            >
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => handleToggle(todo.id)}
-                />
-                <span
-                  className={todo.completed ? "line-through text-gray-400" : ""}
-                >
-                  {todo.title}
-                </span>
-              </div>
-              <Button
-                variant="destructive"
-                size="sm"
-                onClick={() => handleDelete(todo.id)}
+          {/* If loading, it will show Loading... */}
+          {loading && todos.length === 0 && (
+            <div className="text-center py-4 text-gray-400">
+              Loading tasks...
+            </div>
+          )}
+
+          {/* If loading is finished and there are no Todos */}
+          {!loading && todos.length === 0 ? (
+            <div className="text-center py-10 border-2 border-dashed rounded-lg border-gray-200">
+              <p className="text-gray-500">No tasks found! 🎉</p>
+              <p className="text-xs text-gray-400">
+                Add a new todo to get started.
+              </p>
+            </div>
+          ) : (
+            /* If there is a Todo, it will render the list. */
+            todos.map((todo) => (
+              <li
+                key={todo.id}
+                className="flex items-center justify-between p-2 border rounded"
               >
-                Delete
-              </Button>
-            </li>
-          ))}
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={todo.completed}
+                    onChange={() => handleToggle(todo.id)}
+                  />
+                  <span
+                    className={
+                      todo.completed ? "line-through text-gray-400" : ""
+                    }
+                  >
+                    {todo.title}
+                  </span>
+                </div>
+                <Button
+                  variant="destructive"
+                  size="sm"
+                  onClick={() => handleDelete(todo.id)}
+                >
+                  Delete
+                </Button>
+              </li>
+            ))
+          )}
         </ul>
       </CardContent>
     </Card>
